@@ -20,7 +20,7 @@ logging.basicConfig(
 
 
 class СliBot:
-    def __init__(self, model_name, system_prompt="Ты полезный ассистент. Ты сотрудник поддержки магазина «Shoply». Ты всегда дружелёбен и вежлив."):
+    def __init__(self, model_name, system_prompt="Ты полезный ассистент. Ты сотрудник поддержки магазина «Shoply». Ты всегда дружелюбен и вежлив."):
         
         self.chat_model = ChatOpenAI(
             model=model_name,
@@ -158,7 +158,7 @@ if __name__ == "__main__":
     except Exception as e:
         logging.error(f"Не удалось загрузить Orders: {e}")
 
-    system_prompt = f"""Ты полезный ассистент. Ты всегда дружелёбен и вежлив. Отвечай подробно и по существу.
+    system_prompt = f"""Ты полезный ассистент. Ты всегда дружелюбен и вежлив. Отвечай подробно и по существу.
 Используй следующую информацию из базы знаний (FAQ) для ответов на вопросы, если они подходят:
 
 {faq_text}
